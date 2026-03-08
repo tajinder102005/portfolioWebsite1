@@ -41,22 +41,22 @@ function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 260, damping: 26, delay: 0.2 }}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 md:py-3 md:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 xl:py-3 xl:px-6 2xl:px-8">
         <button
           type="button"
-          className="flex items-center gap-1.5 md:gap-3 text-accent group"
+          className="flex items-center gap-1.5 xl:gap-3 text-accent group"
           onClick={() => handleNavClick("home")}
           data-cursor="interactive"
         >
           {/* Use significantly smaller scale on mobile to match image 2 */}
-          <div className="block md:hidden">
+          <div className="block xl:hidden">
             <TSLogo scale={0.18} />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden xl:block">
             <TSLogo scale={0.65} />
           </div>
           <motion.div
-            className="flex items-center font-heading text-base md:text-xl font-bold tracking-widest md:tracking-[0.35em]"
+            className="flex items-center font-heading text-base xl:text-xl font-bold tracking-widest xl:tracking-[0.35em]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -72,7 +72,7 @@ function Navbar() {
         </button>
 
         <nav
-          className={`hidden items-center text-xs font-medium md:flex ${scrolled
+          className={`hidden items-center text-xs font-medium xl:flex ${scrolled
             ? "rounded-full border border-accent/20 bg-[#030805]/95 backdrop-blur-xl px-2 py-1 shadow-lg shadow-black/80"
             : "rounded-full border border-borderSubtle/40 bg-black/50 px-2 py-1"
             }`}
@@ -92,7 +92,7 @@ function Navbar() {
 
         <button
           type="button"
-          className="relative ml-2 flex h-8 w-8 items-center justify-center rounded-full border border-borderSubtle/70 bg-black/80 text-xs font-medium text-muted backdrop-blur md:hidden"
+          className="relative ml-2 flex h-8 w-8 items-center justify-center rounded-full border border-borderSubtle/70 bg-black/80 text-xs font-medium text-muted backdrop-blur xl:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
           data-cursor="interactive"
@@ -115,7 +115,7 @@ function Navbar() {
       </div>
 
       <motion.nav
-        className="mx-auto block max-w-6xl px-4 md:hidden pb-4"
+        className="mx-auto block max-w-6xl px-4 xl:hidden pb-4"
         initial={false}
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.24, ease: "easeInOut" }}
