@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     sourcemap: false,
     rollupOptions: {
-      input: "./public/index.html"
+      input: "./index.html"
     }
   },
   server: {
